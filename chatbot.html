@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #input {
+      width: 100%;
+      font-size: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    #output {
+      width: 100%;
+      font-size: 20px;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid black;
+      min-height: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+    }
+  </style>
+  <script>
+    function respond() {
+      var input = document.getElementById("input").value;
+      if (input == "hello" || input == "Hi" || input == "hello there") {
+        document.getElementById("output").innerHTML = "Hi!";
+      } else if (input == "How are you doing?" || input == "How are you doing" || input == "Hi how are you doing?" || input == "Hi how are you." || input == "hi how are you"|| input == "how are you?" || input == "how are you" || input == "how are you doing") {
+        document.getElementById("output").innerHTML = "I'm always fine, thank you. How about you?";
+      } else {
+        document.getElementById("output").innerHTML = "I don't understand what you're saying.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="input" />
+  <button onclick="respond()">Send</button>
+  <div id="output"></div>
+</body>
+</html>
+
